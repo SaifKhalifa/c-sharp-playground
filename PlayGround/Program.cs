@@ -135,7 +135,7 @@ namespace PlayGround
                         }
 
                         Console.Clear();
-                        Console.WriteLine("Available Account Balance for " + bankAccount.HolderName + " = $" + bankAccount.Balance);
+                        Console.WriteLine("*INFO*: Available Account Balance for " + bankAccount.HolderName + " = $" + bankAccount.Balance);
                         Menu();
                         break;
                     }
@@ -144,7 +144,7 @@ namespace PlayGround
                     {
                         double _depositValue = 0d;
 
-                        Console.Write("Enter how much would you like to deposit = ");
+                        Console.WriteLine("\nEnter how much would you like to deposit = ");
                         _depositValue = GetDoubleInput();
 
                         Console.Clear();
@@ -157,7 +157,7 @@ namespace PlayGround
                     {
                         double _withdrawValue = 0d;
 
-                        Console.Write("Enter how much would you like to withdraaw = ");
+                        Console.WriteLine("\nEnter how much would you like to withdraaw = ");
                         _withdrawValue = GetDoubleInput();
 
                         if (_withdrawValue == bankAccount.Balance)
@@ -202,7 +202,7 @@ namespace PlayGround
 
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Console.WriteLine("\aWARNING, Are you sure you want to delete your account?");
+                        Console.WriteLine("\n\aWARNING, Are you sure you want to delete your account?");
 
                         Console.WriteLine("Enter `Y` to continue, or press anything to cancel the operation...");
 
@@ -240,38 +240,6 @@ namespace PlayGround
         static void Main(string[] args)
         {
             Menu();
-
-            //BankAccount? account = new BankAccount("saif kh");
-
-            //CurrentBankAccount? current = new CurrentBankAccount("saif");
-
-            //Console.WriteLine("current account name:" + current.HolderName);
-            //Console.WriteLine("NORMAL account name:" + account.HolderName);
-
-
-            //Console.WriteLine(current.Balance);
-            //current.Deposit(5000);
-            //current.Withdraw(200);
-
-            //account.Deposit(5000);
-
-            ////Console.WriteLine(account.HolderName);
-            //Console.WriteLine(account.Balance);
-
-            //account.Withdraw(4000);
-            //Console.WriteLine(account.Balance);
-
-            //account.Withdraw(4000);
-            //Console.WriteLine(account.Balance);
-
-            // account deletion
-            //account = null;
-
-            //Console.WriteLine(account.Balance);
-
-            //Console.WriteLine(account.GetType); 
-            // should return an error or unhandled exception,
-            // meaning the instance got deleted, or at least made as null so .NET GC can collect it before the app stops running.
         }
     }
 }
